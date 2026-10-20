@@ -8,8 +8,9 @@ jobs:
     steps:
       - uses: actions/checkout@v4
       - name: Build, sign (ad-hoc) and package
+        working-directory: VoxHalo
         run: bash build_mac.sh
       - uses: actions/upload-artifact@v4
         with:
           name: VoxHalo-macOS
-          path: dist/*
+          path: VoxHalo/dist/*
